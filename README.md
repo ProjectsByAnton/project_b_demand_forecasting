@@ -29,7 +29,7 @@ Selected stores: **44** (highest volume), **3**, **40**, **16**, **32** (lowest 
 ## Forecast Accuracy (90-day holdout)
 
 | Store | Volume Tier | MAE | MAPE |
-
+|---|---|---|---|
 | 44 | Highest | 1,171.6 | 11.3% |
 | 3  | High | 935.2 | 11.3% |
 | 40 | Mid | 802.0 | 14.0% |
@@ -43,7 +43,7 @@ Selected stores: **44** (highest volume), **3**, **40**, **16**, **32** (lowest 
 Simulated two stocking strategies against actual demand over the holdout period: stocking exactly to the forecast, and stocking to the forecast plus a 10% safety buffer.
 
 | Store | Service Rate (no buffer) | Service Rate (+10% buffer) | Improvement | Avg. Daily Excess Stock (buffered) |
-
+|---|---|---|---|
 | 44 | 56.7% | 84.4% | +27.7pp | 1,382 units |
 | 3  | 70.0% | 91.1% | +21.1pp | 1,390 units |
 | 40 | 58.9% | 81.1% | +22.2pp | 799 units |
