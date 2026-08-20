@@ -26,6 +26,8 @@ Selected stores: **44** (highest volume), **3**, **40**, **16**, **32** (lowest 
 - A recurring sharp drop to near-zero sales appears roughly once a year across most stores — consistent with **Christmas Day closures**. This suggests incorporating `holidays_events.csv` would improve the model (see Limitations).
 - **Store 32** shows an unusual spike cluster in late 2017, well above its typical pattern — flagged as an anomaly, not corrected for in this version.
 
+![5 stores' daily GROCERY I sales, 2013–2017](data/processed/store_sales_eda.png)
+
 ## Forecast Accuracy (90-day holdout)
 
 | Store | Volume Tier | MAE | MAPE |
@@ -37,6 +39,12 @@ Selected stores: **44** (highest volume), **3**, **40**, **16**, **32** (lowest 
 | 32 | Lowest | 1,040.2 | 74.6% |
 
 **Finding:** accuracy generally degrades as store volume decreases (11.3% → 18.8% MAPE), consistent with smaller stores having noisier, proportionally more volatile demand. Store 32 is an outlier — its high error is driven by the late-2017 demand spike visible in the EDA, which the model (trained on prior history) could not anticipate. This highlights a real limitation of trend/seasonality-based forecasting: it struggles with sudden regime changes rather than gradual patterns.
+
+**Store 44 (highest volume) — actual vs. predicted:**
+![Store 44 forecast](data/processed/forecast_store_44.png)
+
+**Store 32 (anomaly case) — actual vs. predicted:**
+![Store 32 forecast](data/processed/forecast_store_32.png)
 
 ## Service Rate Simulation
 
